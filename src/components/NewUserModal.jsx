@@ -21,12 +21,12 @@ const NewUserModal = (props) => {
       ) : (
         <Button onClick={toggle}>Edit</Button>
       )}
-      <Modal isOpen={isModal} toggle={toggle}>
+      <Modal isOpen={isModal}  toggle={toggle}>
         <ModalHeader toggle={toggle}>
           {props.create ? "Create User" : "Edit User"}
         </ModalHeader>
         <ModalBody>
-          <NewUserForm user={props.user} toggle={toggle} />
+          <NewUserForm user={props.user} account={props.account} toggle={toggle} />
         </ModalBody>
       </Modal>
     </>

@@ -27,7 +27,7 @@ const ListUsers = ({ users }) => {
             <tr key={user.id}>
               <td>{user.name}</td>
               <td>{user.email}</td>
-              <td>{user.document}</td>
+              <td>{user.account}</td>
               <td>{user.phone}</td>
               <td>{user.registrationDate}</td>
               <td align="center">

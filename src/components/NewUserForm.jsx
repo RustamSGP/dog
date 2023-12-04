@@ -4,20 +4,30 @@ import axios from "axios";
 import { USERS_API_URL } from "../constants";
 import { useAppContext } from "../context/AppContext";
 
+
+
+
 const NewUserForm = (props) => {
-  const initialData = { id: 0, name: "", email: "", document: "", phone: "" };
+  const initialData = { id: 0, name: "", email: "", account: props.account, phone: "" };
   const [formData, setFormData] = useState(initialData);
   const { getUsers } = useAppContext();
 
   useEffect(() => {
     if (props.user) {
-      const { id, name, email, document, phone } = props.user;
-      setFormData({ id, name, email, document, phone });
+      const { id, name, email, account, phone } = props.user;
+      console.log('Account from props.user:', account); // Добавим этот вывод
+      console.log('Props account:', props.account);
+      setFormData({ id, name, email,  account, phone });
     }
-  }, [props.user]);
+    }, [props.user, props.account]);
+  
+
 
   const handleChange = (e) =>
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  
+  setFormData((prev) => ({ ...prev,  [e.target.name]: e.target.value }));
+
+  
 
   const handleAddUser = async (e) => {
     e.preventDefault();
@@ -80,13 +90,13 @@ const NewUserForm = (props) => {
         />
       </FormGroup>
       <FormGroup>
-        <Label for="document">Wallet:</Label>
+        <Label for="account">Wallet:</Label>
         <Input
           type="text"
-          name="document"
-          required
+          name="account"
+          readOnly
           onChange={handleChange}
-          value={formData.document}
+          value={formData.account}
         />
       </FormGroup>
       <FormGroup>

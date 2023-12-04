@@ -12,8 +12,8 @@ const ConfirmRemovalModal = (props) => {
 
   const handleDelete = async (id) => {
     try {
-      const resp = await axios.delete(`${USERS_API_URL}/${id}`);
-      if ((resp.statusText = "OK")) {
+      const resp = await axios.delete(`${USERS_API_URL}/${id}`, { data: { confirmDelete: true } });
+      if ((resp.status === 200)) {
         toggle();
         getUsers();
       }
