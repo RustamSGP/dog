@@ -8,7 +8,7 @@ const port = 3000;
 
 // Middleware
 //app.use(cors());
-app.use(cors({ origin: 'https://dog-sooty-seven.vercel.app' }));
+app.use(cors({ origin: 'https://dog-sooty-seven.vercel.app/admindog' }));
 app.use(bodyParser.json());
 app.use(express.json());
 
