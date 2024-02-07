@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import { USERS_API_URL } from './src/constants/index.js';
 const app = express();
-const port = 'https://dog-sooty-seven.vercel.app';
+const port = 'dog-sooty-seven.vercel.app';
 
 
 // Middleware
