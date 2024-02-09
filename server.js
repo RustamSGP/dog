@@ -7,7 +7,16 @@ const port = process.env.PORT || 443;
 
 // Middleware
 //app.use(cors());
-app.use(cors({ origin: 'https://dog-sooty-seven.vercel.app' }));
+//app.use(cors({ origin: 'https://dog-sooty-seven.vercel.app' }));
+
+app.use(cors({
+  origin: 'https://dog-sooty-seven.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+  optionsSuccessStatus: 204, // Добавим это поле
+}));
+
 app.use(bodyParser.json());
 app.use(express.json());
 
