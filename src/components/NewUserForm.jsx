@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import axios from "axios";
-import { USERS_API_URL } from "../constants";
+//import { USERS_API_URL } from "../constants";
 import { useAppContext } from "../context/AppContext";
 
 
-
+const USERS_API_URL = "https://dog-sooty-seven.vercel.app/users"; // Замените на фактический URL сервера
 
 const NewUserForm = (props) => {
   const initialData = { id: 0, name: "", email: "", account: props.account, phone: "" };
@@ -32,7 +32,7 @@ const NewUserForm = (props) => {
   const handleAddUser = async (e) => {
     e.preventDefault();
     try {
-      const resp = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/users`, formData);
+      const resp = await axios.post(USERS_API_URL, formData);
       console.log('Response from server:', resp);
       if (resp.status === 200) {
         console.log(' данные отправлены');
