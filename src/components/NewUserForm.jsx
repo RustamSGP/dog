@@ -32,7 +32,7 @@ const NewUserForm = (props) => {
   const handleAddUser = async (e) => {
     e.preventDefault();
     try {
-      const resp = await axios.post(USERS_API_URL, formData);
+      const resp = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/users`, formData);
       console.log('Response from server:', resp);
       if (resp.status === 200) {
         console.log(' данные отправлены');
@@ -53,7 +53,8 @@ const NewUserForm = (props) => {
     e.preventDefault();
     try {
       const resp = await axios.put(
-        `${USERS_API_URL}/${props.user.id}`,
+        `${process.env.REACT_APP_BACKEND_URL}/users/${props.user.id}`,
+       // `${USERS_API_URL}/${props.user.id}`,
         formData
       );
       if (resp.status === 200) {
