@@ -3,19 +3,13 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import { USERS_API_URL } from './src/constants/index.js';
 const app = express();
-const port = process.env.PORT || 443;
+const port = process.env.PORT || 3000;
 
 // Middleware
 //app.use(cors());
-//app.use(cors({ origin: 'https://dog-sooty-seven.vercel.app' }));
+app.use(cors({ origin: 'https://dog-sooty-seven.vercel.app' }));
 
-app.use(cors({
-  origin: 'https://dog-sooty-seven.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,
-  optionsSuccessStatus: 204, // Добавим это поле
-}));
+
 
 app.use(bodyParser.json());
 app.use(express.json());
@@ -103,7 +97,7 @@ app.delete(`/users/:id`, (req, res) => {
 });*/
 
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log(`Сервер запущен на порту ${port}`);
   });
 
