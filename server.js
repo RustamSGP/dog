@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import { USERS_API_URL } from './src/constants/index.js';
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 // Middleware
 //app.use(cors());

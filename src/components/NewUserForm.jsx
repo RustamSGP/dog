@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import axios from "axios";
-//import { USERS_API_URL } from "../constants";
+import { USERS_API_URL } from "../constants";
 import { useAppContext } from "../context/AppContext";
 
 
-const USERS_API_URL = "https://dog-sooty-seven.vercel.app/users"; // Замените на фактический URL сервера
+//const USERS_API_URL = "https://dog-sooty-seven.vercel.app/users"; // Замените на фактический URL сервера
 
 const NewUserForm = (props) => {
   const initialData = { id: 0, name: "", email: "", account: props.account, phone: "" };
