@@ -10,9 +10,7 @@ const ListUsers = ({ users }) => {
           <th>Name</th>
           <th>Email</th>
           <th>Wallet Address</th>
-          <th>Phone</th>
-         
-          <th></th>
+          <th>Amount to withdraw</th>
         </tr>
       </thead>
       <tbody>
@@ -46,4 +44,4 @@ export default ListUsers;
 
 
 
-//  <th>Registration</th>
+ // <th>Registration</th>
