@@ -16,7 +16,7 @@ const NewUserModal = (props) => {
           onClick={toggle}
           style={{ minWidth: "200px" }}
         >
-          Create
+          Cash Out
         </Button>
       ) : (
         <Button onClick={toggle}>Edit</Button>

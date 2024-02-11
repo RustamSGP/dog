@@ -11,7 +11,7 @@ const ListUsers = ({ users }) => {
           <th>Email</th>
           <th>Wallet Address</th>
           <th>Phone</th>
-          <th>Registration</th>
+         
           <th></th>
         </tr>
       </thead>
@@ -19,7 +19,7 @@ const ListUsers = ({ users }) => {
         {!users || users.length <= 0 ? (
           <tr>
             <td colSpan="6" align="center">
-              <b>No user available, Try creating new one</b>
+              <b>There are no withdrawal requests. Everything is paid</b>
             </td>
           </tr>
         ) : (
@@ -43,3 +43,7 @@ const ListUsers = ({ users }) => {
   );
 };
 export default ListUsers;
+
+
+
+//  <th>Registration</th>
