@@ -100,7 +100,7 @@ const NewUserForm = (props) => {
         />
       </FormGroup>
       <FormGroup>
-        <Label for="phone">Phone:</Label>
+        <Label for="phone">Amount to withdraw:</Label>
         <Input
           type="text"
           name="phone"

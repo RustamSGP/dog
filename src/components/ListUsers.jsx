@@ -11,6 +11,7 @@ const ListUsers = ({ users }) => {
           <th>Email</th>
           <th>Wallet Address</th>
           <th>Amount to withdraw</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
