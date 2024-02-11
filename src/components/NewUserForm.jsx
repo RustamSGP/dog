@@ -53,8 +53,7 @@ const NewUserForm = (props) => {
     e.preventDefault();
     try {
       const resp = await axios.put(
-        `${process.env.REACT_APP_BACKEND_URL}/users/${props.user.id}`,
-       // `${USERS_API_URL}/${props.user.id}`,
+       `${USERS_API_URL}/${props.user.id}`,
         formData
       );
       if (resp.status === 200) {

@@ -5,12 +5,10 @@ import { USERS_API_URL } from './src/constants/index.js';
 const app = express();
 const port = 3000;
 
+
 // Middleware
 //app.use(cors());
 app.use(cors({ origin: 'https://dog-sooty-seven.vercel.app' }));
-
-
-
 app.use(bodyParser.json());
 app.use(express.json());
 
@@ -100,5 +98,17 @@ app.delete(`/users/:id`, (req, res) => {
 app.listen(port, '0.0.0.0', () => {
     console.log(`Сервер запущен на порту ${port}`);
   });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
